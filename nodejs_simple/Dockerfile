@@ -14,14 +14,9 @@
 FROM       node:4.4.2-wheezy
 MAINTAINER Me
 
-RUN apt-get update
-
 # Expose port #8888 to other apps (use in conjunction with the -p flag)
 EXPOSE 8888
 
 RUN rm /usr/sbin/policy-rc.d
-
-# Set /usr/bin/mongod as the dockerized entry-point application
-# ENTRYPOINT ["/usr/bin/mongod"]
 
 CMD ["node", "index.js"]
