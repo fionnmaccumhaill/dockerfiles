@@ -10,7 +10,7 @@ docker build -t mongo_image_name .
 
 Once you have built the docker MongoDB image then use this command to start the container:
 
-docker run --name some_mongo_name -i -t mongo_image_name
+docker run --name some_mongo_name -p 27017:27017 -i -t mongo_image_name
 
 The mongo_image_name is the same name you gave the image in the build command.
 
